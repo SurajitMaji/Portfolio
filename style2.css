@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Be Vietnam Pro", sans-serif;
+    scroll-behavior: smooth;
+}
+
+#wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+}
+
+.logo-text {
+    margin-left: 0.5rem;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.nav-items {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-items div {
+    font-size: 18px;
+}
+
+.nav-items div a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-items div a:hover {
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.faded-text {
+    user-select: none;
+    font-size: 6rem;
+    color: #e7e7e7;
+    position: absolute;
+    bottom: -1rem;
+    left: 5%;
+    font-weight: bold;
+}
+
+.hero-section-left {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hero-section-heading {
+    font-size: 32px;
+    color: #343d68;
+    font-weight: 600;
+}
+
+.role {
+    color: #4e45d5;
+    font-weight: 600;
+}
+
+.hero-section-sub-heading {
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.hero-section-description {
+    margin-top: 1rem;
+    width: 90%;
+    font-weight: 400;
+}
+
+.btn-pink,
+.read-more-btn a {
+    background-color: #e84949;
+    padding: 0.8rem 1.2rem;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 5px 5px 7px #0000005f;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.btn-pink::before,
+.read-more-btn a::before {
+    content: "";
+    background-color: #1f1f1f;
+    position: absolute;
+    inset: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.8s;
+    z-index: -1;
+}
+
+.btn-pink:hover::before,
+.read-more-btn a:hover::before {
+    transform: scaleX(1);
+}
+
+.hero-section-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.user-image {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.user-image img {
+    width: 100%;
+    max-width: 350px;
+}
+
+.project-section {
+    background-color: #e7e7e7;
+    padding: 2rem 0;
+}
+
+.project-section-heading {
+    text-align: center;
+    color: #e84949;
+    font-size: 36px;
+    margin-bottom: 2rem;
+}
+
+.each-project-section {
+    background: #343d68;
+    color: white;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+.project-information-section {
+    margin-top: 1rem;
+}
+
+.project-name {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.project-description {
+    font-style: italic;
+    font-size: 16px;
+    margin: 0.5rem 0;
+}
+
+.stacks-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.5rem 0;
+}
+
+.stack-image img {
+    width: 32px;
+    margin-right: 10px;
+}
+
+.read-more-btn {
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-section-sub-heading {
+        font-size: 28px;
+    }
+
+    .hero-section-description {
+        width: 100%;
+    }
+
+    .logo-text {
+        font-size: 20px;
+    }
+
+    .nav-items {
+        gap: 1rem;
+    }
+
+    .project-name {
+        font-size: 24px;
+    }
+
+    .project-section-heading {
+        font-size: 30px;
+    }
+}
